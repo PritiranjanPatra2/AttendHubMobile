@@ -18,7 +18,7 @@ type Status = 'In Office' | 'On Leave' | 'WFH' | 'Out of Office' | 'In Meeting' 
 
 export default function EmployeeDetailsScreen({ route, navigation }: any) {
   const { employeeId } = route.params;
-  const { employee, loading, error, fetchEmployee } = useEmployee();
+  const { employee, employeeLoading, error, fetchEmployee } = useEmployee();
 
   const colorScheme = useColorScheme();
   const theme = colorScheme === 'dark' ? DARK_COLORS : COLORS;
@@ -54,7 +54,7 @@ export default function EmployeeDetailsScreen({ route, navigation }: any) {
     return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
   };
 
-  if (loading) {
+  if (employeeLoading) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.bg, justifyContent: 'center' }}>
         <Text style={{ textAlign: 'center', color: theme.text }}>Loading profile...</Text>

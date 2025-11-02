@@ -62,7 +62,7 @@ export const COOL_COLORS = {
   subText: '#415A77',
   online: '#00C2FF',
   offline: '#A9B7C0',
-  accent: '#3A86FF',
+  accent: '#8ec0d7ff',
   accent2: '#00B4D8',
 };
 

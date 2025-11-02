@@ -41,6 +41,7 @@ interface EmployeeContextType {
   team: TeamMember[];
   teamPagination: TeamResponse["pagination"] | null;
   loading: boolean;
+  employeeLoading:boolean;
   error: string | null;
   fetchEmployee: (id: string) => Promise<void>;
   fetchTeam: (page?: number, limit?: number, search?: string) => Promise<void>;
@@ -55,6 +56,7 @@ export const EmployeeProvider = ({ children }: { children: ReactNode }) => {
   const [team, setTeam] = useState<TeamMember[]>([]);
   const [teamPagination, setTeamPagination] = useState<TeamResponse["pagination"] | null>(null);
   const [loading, setLoading] = useState(false);
+  const [employeeLoading,setEmployeeLoading]=useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const getAuthHeader = useCallback(async () => {
@@ -63,7 +65,7 @@ export const EmployeeProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const fetchEmployee = useCallback(async (id: string) => {
-    setLoading(true);
+    setEmployeeLoading(true);
     setError(null);
     try {
       const headers = await getAuthHeader();
@@ -79,7 +81,7 @@ export const EmployeeProvider = ({ children }: { children: ReactNode }) => {
       setError(msg);
       console.error("Fetch Employee Error:", err);
     } finally {
-      setLoading(false);
+      setEmployeeLoading(false);
     }
   }, [getAuthHeader]);
 
@@ -116,6 +118,7 @@ export const EmployeeProvider = ({ children }: { children: ReactNode }) => {
         team,
         teamPagination,
         loading,
+        employeeLoading,
         error,
         fetchEmployee,
         fetchTeam,

@@ -91,11 +91,8 @@ export default function HomeScreen({ navigation }: any) {
     currentLongitude?: number,
     currentLatitude?: number,
   ): { meters: number; formatted: string } | null => {
-    // const lat2 = 28.6139; // Office lat
-    const lat2=28.396897154550135
-
-    // const lon2 = 77.209; // Office lon
-    const lon2=77.04149192330433
+    const lat2 = 28.6139; // Office lat
+    const lon2 = 77.209; // Office lon
 
     if (
       currentLatitude == null ||

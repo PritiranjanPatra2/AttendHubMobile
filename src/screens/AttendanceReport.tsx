@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   markedDay: { backgroundColor: "#4CAF50", borderRadius: 8 },
   markedText: { color: "#fff", fontWeight: "bold" },
   todayCell: { borderWidth: 2, borderColor: "#2196F3" },
-  todayText: { fontWeight: "bold", color: "#2196F3" },
+  todayText: { fontWeight: "bold", color: "white" },
   markDot: {
     width: 6,
     height: 6,

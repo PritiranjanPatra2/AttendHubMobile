@@ -15,11 +15,11 @@ export default function BottomNavigation() {
         tabBarIcon: ({ focused }) => {
           let iconSource;
 
-          if (route.name === 'home') {
+          if (route.name === 'Home') {
             iconSource = require('../assets/bottomTab/home.png');
-        } else if (route.name === 'profile') {
+        } else if (route.name === 'Profile') {
             iconSource = require('../assets/bottomTab/profile.png');
-          }else if(route.name==='team'){
+          }else if(route.name==='Team'){
             iconSource = require('../assets/bottomTab/meet.png');
           }
            else {
@@ -48,17 +48,17 @@ export default function BottomNavigation() {
       })}
     >
       <Tab.Screen
-        name="home"
+        name="Home"
         component={HomeScreen}
         options={{ headerShown: false }}
       />
       <Tab.Screen
-        name="team"
+        name="Team"
         component={TeamScreen}
         options={{ headerShown: false }}
       />
       <Tab.Screen
-        name="profile"
+        name="Profile"
         component={ProfileScreen}
         options={{ headerShown: false }}
       />

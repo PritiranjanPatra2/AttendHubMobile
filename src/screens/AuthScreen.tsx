@@ -166,6 +166,7 @@ const AuthScreen = ({ navigation }: any) => {
             : "Already have an account? Login"}
         </Text>
       </TouchableOpacity>
+      <View style={{height:50}}></View>
     </ScrollView>
   );
 };

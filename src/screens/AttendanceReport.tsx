@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     margin: 2,
     borderRadius: 8,
   },
-  dayText: { fontSize: 14 },
+  dayText: { fontSize: 14 ,color:'green'},
   markedDay: { backgroundColor: "#4CAF50", borderRadius: 8 },
   markedText: { color: "#fff", fontWeight: "bold" },
   todayCell: { borderWidth: 2, borderColor: "#2196F3" },
